@@ -48,13 +48,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import quaternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-quaternary@esm/index.mjs';
+import quaternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-quaternary@v0.1.0-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-quaternary@esm/index.mjs';
+import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-quaternary@v0.1.0-esm/index.mjs';
 ```
 
 #### quaternary( arrays, shape, strides, fcn )
@@ -204,7 +204,7 @@ quaternary.ndarray( [ x, y, z, w, u ], [ 3 ], [ 2, 2, 2, 2, -1 ], [ 1, 1, 1, 1, 
 var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform' ).factory;
 import filledarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled@esm/index.mjs';
 import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@esm/index.mjs';
-import quaternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-quaternary@esm/index.mjs';
+import quaternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-quaternary@v0.1.0-esm/index.mjs';
 
 function add( x, y, z, w ) {
     return x + y + z + w;
