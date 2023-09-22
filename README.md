@@ -48,13 +48,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import quaternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-quaternary@deno/mod.js';
+import quaternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-quaternary@v0.1.0-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-quaternary@deno/mod.js';
+import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-quaternary@v0.1.0-deno/mod.js';
 ```
 
 #### quaternary( arrays, shape, strides, fcn )
@@ -199,7 +199,7 @@ quaternary.ndarray( [ x, y, z, w, u ], [ 3 ], [ 2, 2, 2, 2, -1 ], [ 1, 1, 1, 1, 
 var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform' ).factory;
 import filledarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled@deno/mod.js';
 import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@deno/mod.js';
-import quaternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-quaternary@deno/mod.js';
+import quaternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-quaternary@v0.1.0-deno/mod.js';
 
 function add( x, y, z, w ) {
     return x + y + z + w;
