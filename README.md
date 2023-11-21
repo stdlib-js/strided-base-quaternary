@@ -41,38 +41,30 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/strided-base-quaternary
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-quaternary = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-quaternary@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var quaternary = require( 'path/to/vendor/umd/strided-base-quaternary/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-quaternary@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.quaternary;
-})();
-</script>
+var quaternary = require( '@stdlib/strided-base-quaternary' );
 ```
 
 #### quaternary( arrays, shape, strides, fcn )
@@ -80,11 +72,8 @@ If no recognized module system is present, access bundle contents via the global
 Applies a quaternary callback to strided input array elements and assigns results to elements in a strided output array.
 
 ```javascript
+var add = require( '@stdlib/math-base-ops-add4' );
 var Float64Array = require( '@stdlib/array-float64' );
-
-function add( x, y, z, w ) {
-    return x + y + z + w;
-}
 
 var x = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0 ] );
 var y = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0 ] );
@@ -106,11 +95,8 @@ The function accepts the following arguments:
 The `shape` and `strides` parameters determine which elements in the strided input and output arrays are accessed at runtime. For example, to index every other value in the strided input arrays and to index the first `N` elements of the strided output array in reverse order,
 
 ```javascript
+var add = require( '@stdlib/math-base-ops-add4' );
 var Float64Array = require( '@stdlib/array-float64' );
-
-function add( x, y, z, w ) {
-    return x + y + z + w;
-}
 
 var x = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0 ] );
 var y = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0 ] );
@@ -125,11 +111,8 @@ quaternary( [ x, y, z, w, u ], [ 3 ], [ 2, 2, 2, 2, -1 ], add );
 Note that indexing is relative to the first index. To introduce an offset, use [`typed array`][mdn-typed-array] views.
 
 ```javascript
+var add = require( '@stdlib/math-base-ops-add4' );
 var Float64Array = require( '@stdlib/array-float64' );
-
-function add( x, y, z, w ) {
-    return x + y + z + w;
-}
 
 // Initial arrays...
 var x0 = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] );
@@ -156,11 +139,8 @@ Applies a quaternary callback to strided input array elements and assigns result
 <!-- eslint-disable max-len -->
 
 ```javascript
+var add = require( '@stdlib/math-base-ops-add4' );
 var Float64Array = require( '@stdlib/array-float64' );
-
-function add( x, y, z, w ) {
-    return x + y + z + w;
-}
 
 var x = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0 ] );
 var y = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0 ] );
@@ -181,11 +161,8 @@ While [`typed array`][mdn-typed-array] views mandate a view offset based on the 
 <!-- eslint-disable max-len -->
 
 ```javascript
+var add = require( '@stdlib/math-base-ops-add4' );
 var Float64Array = require( '@stdlib/array-float64' );
-
-function add( x, y, z, w ) {
-    return x + y + z + w;
-}
 
 var x = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] );
 var y = new Float64Array( [ 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 ] );
@@ -213,20 +190,12 @@ quaternary.ndarray( [ x, y, z, w, u ], [ 3 ], [ 2, 2, 2, 2, -1 ], [ 1, 1, 1, 1, 
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {.factory;
+```javascript
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
 var filledarray = require( '@stdlib/array-filled' );
 var filledarrayBy = require( '@stdlib/array-filled-by' );
+var add = require( '@stdlib/math-base-ops-add4' );
 var quaternary = require( '@stdlib/strided-base-quaternary' );
-
-function add( x, y, z, w ) {
-    return x + y + z + w;
-}
 
 var N = 10;
 
@@ -251,11 +220,6 @@ var offsets = [ 0, 0, 0, 0, N-1 ];
 
 quaternary.ndarray( [ x, y, z, w, u ], shape, strides, offsets, add );
 console.log( u );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -353,15 +317,15 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/strided/base/binary]: https://github.com/stdlib-js/strided-base-binary/tree/umd
+[@stdlib/strided/base/binary]: https://github.com/stdlib-js/strided-base-binary
 
-[@stdlib/strided/base/nullary]: https://github.com/stdlib-js/strided-base-nullary/tree/umd
+[@stdlib/strided/base/nullary]: https://github.com/stdlib-js/strided-base-nullary
 
-[@stdlib/strided/base/quinary]: https://github.com/stdlib-js/strided-base-quinary/tree/umd
+[@stdlib/strided/base/quinary]: https://github.com/stdlib-js/strided-base-quinary
 
-[@stdlib/strided/base/ternary]: https://github.com/stdlib-js/strided-base-ternary/tree/umd
+[@stdlib/strided/base/ternary]: https://github.com/stdlib-js/strided-base-ternary
 
-[@stdlib/strided/base/unary]: https://github.com/stdlib-js/strided-base-unary/tree/umd
+[@stdlib/strided/base/unary]: https://github.com/stdlib-js/strided-base-unary
 
 <!-- </related-links> -->
 
