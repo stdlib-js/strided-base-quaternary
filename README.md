@@ -48,13 +48,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import quaternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-quaternary@esm/index.mjs';
+import quaternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-quaternary@v0.2.2-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-quaternary@esm/index.mjs';
+import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-quaternary@v0.2.2-esm/index.mjs';
 ```
 
 #### quaternary( arrays, shape, strides, fcn )
@@ -190,7 +190,7 @@ var discreteUniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-bas
 import filledarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled@esm/index.mjs';
 import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@esm/index.mjs';
 import add from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-ops-add4@esm/index.mjs';
-import quaternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-quaternary@esm/index.mjs';
+import quaternary from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-quaternary@v0.2.2-esm/index.mjs';
 
 var N = 10;
 
